@@ -24,7 +24,19 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 
 # Gapps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+$(call inherit-product, vendor/gms/gms_full.mk)
+
+# Some FluidOS requirements
+YOUR_HW_PLATFORM := sm8150
+
+# Hardware
+PRODUCT_BOARD_PLATFORM := sm6150
+PRODUCT_USES_QCOM_HARDWARE := true
+
+# HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sm8150/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/sm8150/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/sm8150/media
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -260,7 +272,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # NFC
-
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
@@ -283,7 +294,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-dot
+    $(LOCAL_PATH)/overlay-fluid
 
 # Power
 PRODUCT_PACKAGES += \
@@ -348,14 +359,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
-# Soong
-PRODUCT_BOARD_PLATFORM := sm6150
-PRODUCT_USES_QCOM_HARDWARE := true
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/qcom-caf/sm8150
 
 # Telephony
 PRODUCT_PACKAGES += \

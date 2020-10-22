@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "BubbleGum"
+  },
+  {
+    "repository": "android_vendor_xiaomi_davinci",
+    "target_path": "vendor/xiaomi/davinci",
+    "branch": "fluid-11"
+  }
+]

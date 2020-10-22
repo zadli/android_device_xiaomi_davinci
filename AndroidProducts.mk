@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_davinci.mk
+    $(LOCAL_DIR)/fluid_davinci.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_davinci-user \
-    dot_davinci-userdebug \
-    dot_davinci-eng
+    fluid_davinci-user \
+    fluid_davinci-userdebug \
+    fluid_davinci-eng
