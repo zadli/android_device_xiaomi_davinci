@@ -24,6 +24,10 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 # Inherit some common Fluid stuff.
 $(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_GAPPS := true
+FLUID_BUILD_TYPE := OFFICIAL
+
 PRODUCT_NAME := fluid_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
