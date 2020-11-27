@@ -73,4 +73,14 @@
     <string name="touch_sensitivity_summary">Controls touch sensitivity for repeated taps</string>
     <string name="touch_resistant_title">Touch-resistant area</string>
     <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
+
+    <!-- Kcal settings -->
+    <string name="kcal_settings_title">Display colors</string>
+    <string name="kcal_settings_summary">Adjust the color of your display</string>
+    <string name="kcal_enable_title">Enable display color configuration</string>
+    <string name="kcal_enable_summary">Enables the configuration of the display color for a custom adjustment</string>
+    <string name="red_slider_title">Red</string>
+    <string name="green_slider_title">Green</string>
+    <string name="blue_slider_title">Blue</string>    
+
 </resources>

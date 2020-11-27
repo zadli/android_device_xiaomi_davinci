@@ -29,6 +29,7 @@ import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.display.KcalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -42,6 +43,14 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+
+        FileUtils.writeLine(KcalUtils.KCAL_ENABLE_NODE,
+            sharedPrefs.getBoolean("kcal_enable", false) ? "1" : "0");
+
+        KcalUtils.writeConfigToNode(1, sharedPrefs.getInt("red_slider", 256));
+        KcalUtils.writeConfigToNode(2, sharedPrefs.getInt("green_slider", 256));
+        KcalUtils.writeConfigToNode(3, sharedPrefs.getInt("blue_slider", 256));
+
         DozeUtils.checkDozeService(context);
         PopupCameraUtils.startService(context);
         ThermalUtils.startService(context);
