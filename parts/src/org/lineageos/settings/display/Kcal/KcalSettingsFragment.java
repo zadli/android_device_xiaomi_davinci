@@ -61,14 +61,17 @@ public class KcalSettingsFragment extends PreferenceFragment implements
             mRedColorSlider = (SeekBarPreference) findPreference("red_slider");
             mRedColorSlider.setOnPreferenceChangeListener(this);
             mRedColorSlider.setSummary(String.valueOf(mRedColorSlider.getValue()));
+            mRedColorSlider.setUpdatesContinuously(true);
 
             mGreenColorSlider = (SeekBarPreference) findPreference("green_slider");
             mGreenColorSlider.setOnPreferenceChangeListener(this);
             mGreenColorSlider.setSummary(String.valueOf(mGreenColorSlider.getValue()));
+            mGreenColorSlider.setUpdatesContinuously(true);
 
             mBlueColorSlider = (SeekBarPreference) findPreference("blue_slider");
             mBlueColorSlider.setOnPreferenceChangeListener(this);
             mBlueColorSlider.setSummary(String.valueOf(mBlueColorSlider.getValue()));
+            mBlueColorSlider.setUpdatesContinuously(true);
         } else {
             mKcalSwitchPreference.setEnabled(false);
         }
