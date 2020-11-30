@@ -2,20 +2,20 @@ allow system_app hal_motor_hwservice_xiaomi:hwservice_manager find;
 
 binder_call(system_app, hal_motor)
 
-allow system_app { motor_device sysfs_graphics sysfs_leds }:dir search;
-allow system_app { cgroup sysfs_graphics }:file rw_file_perms;
-allow system_app { motor_device sysfs_graphics hall_device }:chr_file rw_file_perms;
+allow system_app { motor_device vendor_sysfs_graphics sysfs_leds }:dir search;
+allow system_app { cgroup vendor_sysfs_graphics }:file rw_file_perms;
+allow system_app { motor_device vendor_sysfs_graphics hall_device }:chr_file rw_file_perms;
 
 allow system_app sysfs_dm:file rw_file_perms;
 
-allow system_app sysfs_battery_supply:dir { search };
-allow system_app sysfs_battery_supply:file { read };
-allow system_app sysfs_battery_supply:file { open };
-allow system_app sysfs_battery_supply:file { getattr };
+allow system_app vendor_sysfs_battery_supply:dir { search };
+allow system_app vendor_sysfs_battery_supply:file { read };
+allow system_app vendor_sysfs_battery_supply:file { open };
+allow system_app vendor_sysfs_battery_supply:file { getattr };
 
 # Allow binder communication with hal_touchfeature_xiaomi_default
 binder_call(system_app, hal_touchfeature_default)
 
 allow system_app hal_touchfeature_hwservice_xiaomi:hwservice_manager find;
 
-hal_client_domain(system_app, hal_fm)
+hal_client_domain(system_app, vendor_hal_fm)
