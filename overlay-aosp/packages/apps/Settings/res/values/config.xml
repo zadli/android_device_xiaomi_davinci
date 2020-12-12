@@ -24,6 +24,7 @@
 
     <!-- Screen off FOD -->
     <bool name="config_supportScreenOffFod">true</bool>
+    <bool name="config_supportsScreenOffInDisplayFingerprint">true</bool>
 
     <!-- FOD recognizing animation -->
     <bool name="config_showFODAnimationSettings">true</bool>
