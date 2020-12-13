@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# Active Edge
+PRODUCT_PACKAGES += \
+    ElmyraService
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
