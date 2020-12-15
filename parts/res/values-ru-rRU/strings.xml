@@ -35,9 +35,24 @@
     <string name="popup_calibration_warning_title">Калибровка мотора</string>
     <string name="popup_calibration_warning_text">Ненужное использование калибровки может привести к необратимому повреждению. Рекомендуется откалибровать мотор выдвижной камеры только в случае, если он не двигается должным образом или находится в неправильном положении!</string>
 
-    <!-- DC Dimming settings -->
-    <string name="dc_dimming_enable_title">Устранение мерцания</string>
-    <string name="dc_dimming_enable_summary">Использовать DC dimming для снижения нагрузки на глаза</string>
+    <!-- DC Dimming -->
+    <string name="dc_dimming_enable">Включить DC Dimming</string>
+    <string name="dc_dimming_title">DC Dimming</string>
+    <string name="dc_dimming_summary">DC Dimming уменьшает нагрузку на глаза в условиях низкой освещенности</string>
+    <string name="dc_dimming_summary_on">Включено</string>
+    <string name="dc_dimming_summary_off">Выключено</string>
+    <string name="dc_dimming_info">Уменьшает нагрузку на глаза в условиях низкой освещенности, но может приводить к снижению качества изображения и ухудшению цветопередачи.</string>
+    <string name="dc_dimming_auto_mode_title">Расписание</string>
+    <string name="dc_dimming_mode_never">Никогда</string>
+    <string name="dc_dimming_mode_time">Включается в указанное время</string>
+    <string name="dc_dimming_mode_brightness">Включается, когда яркость ниже порога</string>
+    <string name="dc_dimming_mode_full">Зависит от времени и яркости</string>
+    <string name="dc_dimming_brightness_title">Порог яркости</string>
+    <string name="dc_dimming_brightness_info">DC Dimming включается только тогда, когда средняя яркость ниже порогового значения</string>
+    <string name="dc_dimming_off_auto_mode_auto">Будет включено автоматически</string>
+    <string name="dc_dimming_on_auto_mode_auto">Будет выключено автоматически</string>
+    <string name="dc_dimming_start_time">Начало</string>
+    <string name="dc_dimming_end_time">Конец</string>
 
     <!-- Pick-up to wake gesture-->
     <string name="wake_gesture_title">Пробудежение</string>
