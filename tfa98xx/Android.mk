@@ -30,6 +30,7 @@ LOCAL_C_INCLUDES += \
     $(call include-path-for,audio-route) \
     $(call project-path-for,qcom-audio)/hal \
     $(call project-path-for,qcom-audio)/hal/msm8974 \
+    $(call project-path-for,qcom-audio)/hal/msm8150 \
     $(call project-path-for,qcom-audio)/hal/audio_extn \
 
 LOCAL_HEADER_LIBRARIES := \

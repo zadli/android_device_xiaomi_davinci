@@ -25,9 +25,9 @@ INITIAL_COPYRIGHT_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-FLUID_ROOT="${MY_DIR}/../../.."
+AWAKEN_ROOT="${MY_DIR}/../../.."
 
-HELPER="${FLUID_ROOT}/vendor/fluid/build/tools/extract_utils.sh"
+HELPER="${AWAKEN_ROOT}/vendor/awaken/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -35,7 +35,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE}" "${VENDOR}" "${FLUID_ROOT}" false
+setup_vendor "${DEVICE}" "${VENDOR}" "${AWAKEN_ROOT}" false
 
 # Copyright headers and guards
 write_headers "${DEVICE}"
